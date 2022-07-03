@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.all {
+	min-height: 100vh;
+	background-color: #A6E22B;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box{
+	background-color: #0f0;
+	border-radius: 15px;
+	overflow: hidden;
+	position: relative;
+}
+.img {
+	width: 400px;
+	display: block;
+}
+.text {
+	background-color: aqua;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    font-weight: bold;
+    text-transform: capitalize;
+    opacity: 0;
+    transform: rotate(-270deg) scale(0.3);
+    transition: 0.3s opacity linear, 0.3s transform linear;
+}
+.box:hover .text {
+	opacity: 1;
+	transform: none;
+}
